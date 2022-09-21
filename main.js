@@ -10,57 +10,67 @@ const directText = document.getElementById('dirText');
 //declare variable for go button
 const goBtn = document.getElementById('goBtn');
 //declare array of page objects
-const page1 = {
-    headerText:'I can read your mind!',
-    nextBtn:/*(hidden)*/,
-    helpText:''/*(hidden)*/,
-    directText:''/*(hidden)*/,
-    goBtn: /*nextPage functionality*/,
-}
-const page2 = {
-    headerText: 'Pick a number from 01-99',
-    nextBtn: /*the nextPage functionality*/,
-    helpText:'when you have your number',
-    directText:'click next',
-    goBtn: /*previousPage*/,
-}
-const page3 = {
-    headerText:'Add both digits together to get a new number',
-    nextBtn:/*nextPage functionality*/,
-    helpText:'ex: 14 is 1 + 4 = 5',
-    directText:'click next to proceed',
-    goBtn:/* previousPage functionality*/
-}
-const page4 = {
-    headerText:'Subtract your new number from the original number',
-    nextBtn:/*nextPage functionality*/,
-    helpText:'Ex: 14 - 5 = 9',
-    directText:'click next to proceed',
-    goBtn:/*previousPage functionality*/
-}
-const page5 = {
-    headerText:/*array of randomized symbols with matched numbers*/,
-    nextBtn:/*nextPage functionality*/,
-    helpText:'Find your new number.',
-    directText:'Note the symbol beside the number then click reveal',
-    goBtn:/*previousPage functionality*/
-}
-const page6 = {
-    headerText:/*the & symbol*/,
-    nextBtn:/*hidden*/
-    helpText:'Your symbol is:'
-    directText:'&'
-    goBtn: /*previousPage functionality*/
-}
 
 
-
+let state = {
+    currentPage: 0,
+    pages: [
+        {
+            headerText:'I can read your mind!',
+            nextBtn: ''/*(hidden)*/,
+            helpText:''/*(hidden)*/,
+            directText:''/*(hidden)*/,
+            goBtn: ''/*nextPage functionality*/,
+        },
+        {
+            headerText: 'Pick a number from 01-99',
+            nextBtn: '' /*the nextPage functionality*/,
+            helpText:'when you have your number',
+            directText:'click next',
+            goBtn: ''/*previousPage*/,
+        },
+        {
+            headerText:'Add both digits together to get a new number',
+            nextBtn: '' /*nextPage functionality*/,
+            helpText:'ex: 14 is 1 + 4 = 5',
+            directText:'click next to proceed',
+            goBtn: ''/* previousPage functionality*/
+        },
+        {
+            headerText:'Subtract your new number from the original number',
+            nextBtn: ''/*nextPage functionality*/,
+            helpText:'Ex: 14 - 5 = 9',
+            directText:'click next to proceed',
+            goBtn: ''/*previousPage functionality*/
+        },
+        {
+            headerText: ''/*array of randomized symbols with matched numbers*/,
+            nextBtn: '' /*nextPage functionality*/,
+            helpText:'Find your new number.',
+            directText:'Note the symbol beside the number then click reveal',
+            goBtn: ''/*previousPage functionality*/
+        },
+        {
+            headerText: '' /*the & symbol*/,
+            nextBtn: ''/*hidden*/,
+            helpText:'Your symbol is:',
+            directText:'&',
+            goBtn: ''/*previousPage functionality*/
+        }
+    ],
+}
 
 //declare array of pages with page objects
-const pages = [page1, page2, page3, page4, page5];
+// const pages = [page1, page2, page3, page4, page5];
+// pages[0] => page1
+// pages[1] => page2
+
 //function for updateing page
 function nextPage () {
     //I need this to change the current page to the next pages state
+    // Take state.pages[state.currentPage] incremented by 1
+    // Set textcontent of the headText to state.pages[state.currentPage].headerText
+    // Set nextBtn of the headText to state.pages[state.currentPage].headerText
 
 
     //change text of h1
