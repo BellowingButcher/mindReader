@@ -15,9 +15,47 @@ const page1 = {
     nextBtn:/*(hidden)*/,
     helpText:''/*(hidden)*/,
     directText:''/*(hidden)*/,
-    goBtn: /*nextButton functionality*/,
-
+    goBtn: /*nextPage functionality*/,
 }
+const page2 = {
+    headerText: 'Pick a number from 01-99',
+    nextBtn: /*the nextPage functionality*/,
+    helpText:'when you have your number',
+    directText:'click next',
+    goBtn: /*previousPage*/,
+}
+const page3 = {
+    headerText:'Add both digits together to get a new number',
+    nextBtn:/*nextPage functionality*/,
+    helpText:'ex: 14 is 1 + 4 = 5',
+    directText:'click next to proceed',
+    goBtn:/* previousPage functionality*/
+}
+const page4 = {
+    headerText:'Subtract your new number from the original number',
+    nextBtn:/*nextPage functionality*/,
+    helpText:'Ex: 14 - 5 = 9',
+    directText:'click next to proceed',
+    goBtn:/*previousPage functionality*/
+}
+const page5 = {
+    headerText:/*array of randomized symbols with matched numbers*/,
+    nextBtn:/*nextPage functionality*/,
+    helpText:'Find your new number.',
+    directText:'Note the symbol beside the number then click reveal',
+    goBtn:/*previousPage functionality*/
+}
+const page6 = {
+    headerText:/*the & symbol*/,
+    nextBtn:/*hidden*/
+    helpText:'Your symbol is:'
+    directText:'&'
+    goBtn: /*previousPage functionality*/
+}
+
+
+
+
 //declare array of pages with page objects
 const pages = [page1, page2, page3, page4, page5];
 //function for updateing page
