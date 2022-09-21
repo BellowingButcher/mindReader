@@ -7,8 +7,13 @@ const headText = document.getElementById('hdrText');
 const helpText = document.getElementById('hlpText');
 //declare direction text
 const directText = document.getElementById('dirText');
+//declare variable for go button
+const goBtn = document.getElementById('goBtn');
 //function for updateing page
-function updatePage () {
+function nextPage () {
+    //I need this to change the current page to the next pages state
+
+
     //change text of h1
     headText.textContent = 'changed header text';
     //change text of helperText
@@ -16,4 +21,13 @@ function updatePage () {
     //change text of directionText
     directText.textContent = 'changed direction text';
 }
-nextBtn.addEventListener('click', updatePage);
+function previousPage () {
+    //change state of page to the previous state
+    headText.textContent = 'previous text';
+    helpText.textContent = 'previous text';
+    directText.textContent = 'previous text';
+}
+//add eventlistener to nextBtn
+nextBtn.addEventListener('click', nextPage);
+//add eventlistener to goBtn
+goBtn.addEventListener('click', previousPage);
