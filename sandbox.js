@@ -6,5 +6,7 @@ let obj = {
 }
 
 console.log("Before:", obj.age);
-obj.age = 30;
+obj.age += 1;
 console.log("After:", obj.age);
+obj.age += 1;
+console.log('evenAfter', obj.age);

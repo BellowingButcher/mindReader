@@ -20,46 +20,47 @@ let state = {
             nextBtn: ''/*(hidden)*/,
             helpText:''/*(hidden)*/,
             directText:''/*(hidden)*/,
-            goBtn: ''/*nextPage functionality*/,
+            goBtn: 'Go'/*nextPage functionality*/,
         },
         {
             headerText: 'Pick a number from 01-99',
-            nextBtn: '' /*the nextPage functionality*/,
+            nextBtn: 'Next' /*the nextPage functionality*/,
             helpText:'when you have your number',
             directText:'click next',
-            goBtn: ''/*previousPage*/,
+            goBtn: 'reverse'/*reset icon*/,
         },
         {
             headerText:'Add both digits together to get a new number',
-            nextBtn: '' /*nextPage functionality*/,
+            nextBtn: 'Next' /*nextPage functionality*/,
             helpText:'ex: 14 is 1 + 4 = 5',
             directText:'click next to proceed',
-            goBtn: ''/* previousPage functionality*/
+            goBtn: 'reverse'/*reset icon*/
         },
         {
             headerText:'Subtract your new number from the original number',
-            nextBtn: ''/*nextPage functionality*/,
+            nextBtn: 'Next'/*nextPage functionality*/,
             helpText:'Ex: 14 - 5 = 9',
             directText:'click next to proceed',
-            goBtn: ''/*previousPage functionality*/
+            goBtn: 'reverse'/*reset icon*/
         },
         {
             headerText: ''/*array of randomized symbols with matched numbers*/,
-            nextBtn: '' /*nextPage functionality*/,
+            nextBtn: 'Reveal' /*nextPage functionality*/,
             helpText:'Find your new number.',
             directText:'Note the symbol beside the number then click reveal',
-            goBtn: ''/*previousPage functionality*/
+            goBtn: 'reverse'/*reset icon*/
         },
         {
             headerText: '' /*the & symbol*/,
             nextBtn: ''/*hidden*/,
             helpText:'Your symbol is:',
             directText:'&',
-            goBtn: ''/*previousPage functionality*/
+            goBtn: 'reverse'/*reset icon*/
         }
     ],
 }
-
+//declare currentPage as variable
+let pageNumber = state.currentPage;
 //declare array of pages with page objects
 // const pages = [page1, page2, page3, page4, page5];
 // pages[0] => page1
@@ -69,16 +70,14 @@ let state = {
 function nextPage () {
     //I need this to change the current page to the next pages state
     // Take state.pages[state.currentPage] incremented by 1
-    // Set textcontent of the headText to state.pages[state.currentPage].headerText
-    // Set nextBtn of the headText to state.pages[state.currentPage].headerText
+    state.currentPage += 1;
+    // Set textcontent of headerText to state.pages[0].headerText
+    headText.textContent = state.pages[pageNumber];
+    // Set nextBtn text to state.pages[0].nextBtn text
+    // Set helpText to state.pages[0].helpText
+    // Set directText to state.pages[0].helpText
+    // Set goBtn text to state.pages[0].goBtn text
 
-
-    //change text of h1
-    headText.textContent = 'changed header text';
-    //change text of helperText
-    helpText.textContent = 'changed help text';
-    //change text of directionText
-    directText.textContent = 'changed direction text';
 }
 function previousPage () {
     //change state of page to the previous state
