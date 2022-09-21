@@ -9,6 +9,17 @@ const helpText = document.getElementById('hlpText');
 const directText = document.getElementById('dirText');
 //declare variable for go button
 const goBtn = document.getElementById('goBtn');
+//declare array of page objects
+const page1 = {
+    headerText:'I can read your mind!',
+    nextBtn:/*(hidden)*/,
+    helpText:''/*(hidden)*/,
+    directText:''/*(hidden)*/,
+    goBtn: /*nextButton functionality*/,
+
+}
+//declare array of pages with page objects
+const pages = [page1, page2, page3, page4, page5];
 //function for updateing page
 function nextPage () {
     //I need this to change the current page to the next pages state
