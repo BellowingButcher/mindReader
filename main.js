@@ -58,31 +58,31 @@ let state = {
             nextBtn: ''/*(hidden)*/,
             helpText:''/*(hidden)*/,
             directText:''/*(hidden)*/,
-            goBtn: 'Go'/*nextPage functionality*/,
+            goBtn: '<i class="bi bi-youtube"></i>'/*nextPage functionality*/,
             resetButton: 'reset'
         },
         {
             headerText: 'Pick a number from 01-99',
-            nextBtn: 'Next' /*the nextPage functionality*/,
+            nextBtn: '<i class="bi bi-arrow-clockwise"></i>' /*the nextPage functionality*/,
             helpText:'when you have your number',
-            directText:'click next',
-            goBtn: 'reverse'/*reset icon*/,
+            directText:'click next icon',
+            goBtn: '<i class="bi bi-arrow-counterclockwise"></i>'/*reset icon*/,
             resetButton: 'reset'
         },
         {
             headerText:'Add both digits together to get a new number',
-            nextBtn: 'Next' /*nextPage functionality*/,
+            nextBtn: '<i class="bi bi-arrow-clockwise"></i>' /*nextPage functionality*/,
             helpText:'ex: 14 is 1 + 4 = 5',
-            directText:'click next to proceed',
-            goBtn: 'reverse'/*reset icon*/,
+            directText:'click next icon',
+            goBtn: '<i class="bi bi-arrow-counterclockwise"></i>'/*reset icon*/,
             resetButton: 'reset'
         },
         {
             headerText:'Subtract your new number from the original number',
-            nextBtn: 'Next'/*nextPage functionality*/,
+            nextBtn: '<i class="bi bi-arrow-clockwise"></i>'/*nextPage functionality*/,
             helpText:'Ex: 14 - 5 = 9',
-            directText:'click next to proceed',
-            goBtn: 'reverse'/*reset icon*/,
+            directText:'click next icon',
+            goBtn: '<i class="bi bi-arrow-counterclockwise"></i>'/*reset icon*/,
             resetButton: 'reset'
         },
         {
@@ -90,7 +90,7 @@ let state = {
             nextBtn: 'Reveal' /*nextPage functionality*/,
             helpText:'Find your new number.',
             directText:'Note the symbol beside the number then click reveal',
-            goBtn: 'reverse'/*reset icon*/,
+            goBtn: '<i class="bi bi-arrow-counterclockwise"></i>'/*reset icon*/,
             reset: 'reset'
         },
         {
@@ -98,7 +98,7 @@ let state = {
             nextBtn: ''/*hidden*/,
             helpText:'Your symbol is:',
             directText: arr[9],
-            goBtn: 'reverse'/*reset icon*/,
+            goBtn: '<i class="bi bi-arrow-counterclockwise"></i>'/*reset icon*/,
             resetButton: 'reset'
         }
     ],
@@ -117,13 +117,13 @@ function ogPage () {
      // Set textcontent of headerText to state.pages[0].headerText
     headText.textContent = state.pages[pageNumber].headerText;
      // Set nextBtn text to state.pages[0].nextBtn text
-    nextButton.textContent = state.pages[pageNumber].nextBtn;
+    nextButton.innerHTML = state.pages[pageNumber].nextBtn;
      // Set helpText to state.pages[0].helpText
     helperText.textContent = state.pages[pageNumber].helpText;
      // Set directText to state.pages[0].helpText
     directerText.textContent = state.pages[pageNumber].directText;
      // Set goBtn text to state.pages[0].goBtn text
-    goButton.textContent = state.pages[pageNumber].goBtn;
+    goButton.innerHTML = state.pages[pageNumber].goBtn;
 }
 //function for updateing page
 function nextPage () {
@@ -145,13 +145,13 @@ function nextPage () {
     // Set textcontent of headerText to state.pages[0].headerText
     headText.textContent = state.pages[state.currentPage].headerText;
     // Set nextBtn text to state.pages[0].nextBtn text
-    nextButton.textContent = state.pages[state.currentPage].nextBtn;
+    nextButton.innerHTML = state.pages[state.currentPage].nextBtn;
     // Set helpText to state.pages[0].helpText
     helperText.textContent = state.pages[state.currentPage].helpText;
     // Set directText to state.pages[0].helpText
     directerText.textContent = state.pages[state.currentPage].directText;
     // Set goBtn text to state.pages[0].goBtn text
-    goButton.textContent = state.pages[state.currentPage].goBtn;
+    goButton.innerHTML = state.pages[state.currentPage].goBtn;
 
     }
     function previousPage () {
@@ -159,13 +159,13 @@ function nextPage () {
             // Set textcontent of headerText to state.pages[0].headerText
     headText.textContent = state.pages[state.currentPage].headerText;
     // Set nextBtn text to state.pages[0].nextBtn text
-    nextButton.textContent = state.pages[state.currentPage].nextBtn;
+    nextButton.innerHTML = state.pages[state.currentPage].nextBtn;
     // Set helpText to state.pages[0].helpText
     helperText.textContent = state.pages[state.currentPage].helpText;
     // Set directText to state.pages[0].helpText
     directerText.textContent = state.pages[state.currentPage].directText;
     // Set goBtn text to state.pages[0].goBtn text
-    goButton.textContent = state.pages[state.currentPage].goBtn;
+    goButton.innerHTML = state.pages[state.currentPage].goBtn;
 
     }
     //eventlistener to initialize page[0]
