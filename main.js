@@ -84,6 +84,15 @@ function nextPage () {
     //I need this to change the current page to the next pages state
     // Take state.pages[state.currentPage] incremented by 1
     state.currentPage += 1;
+
+    // =========
+    // FROM JOSH: you could (in the local scope of this function) define
+    // a variable like let pageNumber = state.currentPage after you increment state.pageNumber above
+    // then use that pageNumber like you're already doing.
+    // OR
+    // Just change all the pageNumbers here to state.currentPage
+    // =========
+
     // Set textcontent of headerText to state.pages[0].headerText
     headText.textContent = state.pages[pageNumber].headerText;
     // Set nextBtn text to state.pages[0].nextBtn text
@@ -108,14 +117,14 @@ function nextPage () {
     nextButton.addEventListener('click', nextPage);
     //add eventlistener to goBtn
     goButton.addEventListener('click', () => {
-        console.log(pageNumber);
+        console.log(state.currentPage);
         //if page number is 0 'first on in the array'
-        if (pageNumber === 0) {
+        if (state.currentPage === 0) {
             //run function next page
             nextPage();
         };
         // if pageNumber is greater than 0
-        if (pageNumber > 0) {
+        if (state.currentPage > 0) {
             //run function previousPage
             previousPage();
         }
