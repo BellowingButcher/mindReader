@@ -10,6 +10,7 @@ const directerText = document.getElementById('dirText');
 //declare variable for go button
 const goButton = document.getElementById('goBtn');
 //declare array of page objects
+const resetButton = document.getElementById('resetButton');
 
 
 let state = {
@@ -21,6 +22,7 @@ let state = {
             helpText:''/*(hidden)*/,
             directText:''/*(hidden)*/,
             goBtn: 'Go'/*nextPage functionality*/,
+            resetButton: 'reset'
         },
         {
             headerText: 'Pick a number from 01-99',
@@ -28,34 +30,39 @@ let state = {
             helpText:'when you have your number',
             directText:'click next',
             goBtn: 'reverse'/*reset icon*/,
+            resetButton: 'reset'
         },
         {
             headerText:'Add both digits together to get a new number',
             nextBtn: 'Next' /*nextPage functionality*/,
             helpText:'ex: 14 is 1 + 4 = 5',
             directText:'click next to proceed',
-            goBtn: 'reverse'/*reset icon*/
+            goBtn: 'reverse'/*reset icon*/,
+            resetButton: 'reset'
         },
         {
             headerText:'Subtract your new number from the original number',
             nextBtn: 'Next'/*nextPage functionality*/,
             helpText:'Ex: 14 - 5 = 9',
             directText:'click next to proceed',
-            goBtn: 'reverse'/*reset icon*/
+            goBtn: 'reverse'/*reset icon*/,
+            resetButton: 'reset'
         },
         {
             headerText: ''/*array of randomized symbols with matched numbers*/,
             nextBtn: 'Reveal' /*nextPage functionality*/,
             helpText:'Find your new number.',
             directText:'Note the symbol beside the number then click reveal',
-            goBtn: 'reverse'/*reset icon*/
+            goBtn: 'reverse'/*reset icon*/,
+            reset: 'reset'
         },
         {
             headerText: '' /*the & symbol*/,
             nextBtn: ''/*hidden*/,
             helpText:'Your symbol is:',
             directText:'&',
-            goBtn: 'reverse'/*reset icon*/
+            goBtn: 'reverse'/*reset icon*/,
+            resetButton: 'reset'
         }
     ],
 }
@@ -94,22 +101,34 @@ function nextPage () {
     // =========
 
     // Set textcontent of headerText to state.pages[0].headerText
-    headText.textContent = state.pages[pageNumber].headerText;
+    headText.textContent = state.pages[state.currentPage].headerText;
     // Set nextBtn text to state.pages[0].nextBtn text
-    nextButton.textContent = state.pages[pageNumber].nextBtn;
+    nextButton.textContent = state.pages[state.currentPage].nextBtn;
     // Set helpText to state.pages[0].helpText
-    helperText.textContent = state.pages[pageNumber].helpText;
+    helperText.textContent = state.pages[state.currentPage].helpText;
     // Set directText to state.pages[0].helpText
-    directerText.textContent = state.pages[pageNumber].directText;
+    directerText.textContent = state.pages[state.currentPage].directText;
     // Set goBtn text to state.pages[0].goBtn text
-    goButton.textContent = state.pages[pageNumber].goBtn;
+    goButton.textContent = state.pages[state.currentPage].goBtn;
 
     }
     function previousPage () {
-        //change state of page to the previous state
+        state.currentPage -= 1;
+            // Set textcontent of headerText to state.pages[0].headerText
+    headText.textContent = state.pages[state.currentPage].headerText;
+    // Set nextBtn text to state.pages[0].nextBtn text
+    nextButton.textContent = state.pages[state.currentPage].nextBtn;
+    // Set helpText to state.pages[0].helpText
+    helperText.textContent = state.pages[state.currentPage].helpText;
+    // Set directText to state.pages[0].helpText
+    directerText.textContent = state.pages[state.currentPage].directText;
+    // Set goBtn text to state.pages[0].goBtn text
+    goButton.textContent = state.pages[state.currentPage].goBtn;
+
+        /*change state of page to the previous state
         headText.textContent = 'previous text';
         helperText.textContent = 'previous text';
-        directerText.textContent = 'previous text';
+        directerText.textContent = 'previous text';*/
     }
     //eventlistener to initialize page[0]
     document.addEventListener('DOMContentLoaded', () => {ogPage()});
@@ -131,3 +150,4 @@ function nextPage () {
             return;
         }
     });
+    resetButton.addEventListener('click', ogPage);
