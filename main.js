@@ -9,10 +9,37 @@ const helperText = document.getElementById('hlpText');
 const directerText = document.getElementById('dirText');
 //declare variable for go button
 const goButton = document.getElementById('goBtn');
-//declare array of page objects
+//declare reset button
 const resetButton = document.getElementById('resetButton');
+//declare symbol array
+let simpleSymbolArray =   [
+                    '~',
+                    '!',
+                    '@',
+                    '#',
+                    '$',
+                    '%',
+                    '^',
+                    '&',
+                    '*',
+                    ];
+let arr = [];
+//repeat simpleSymbolArray 11 times
+for(let i=1;i<=11;i++){
+    //every loop i want to add simpleSymbolArray to the end of simpleSymbolArray
+    arr = arr.concat(simpleSymbolArray);
+    //
+}
+
+//make that var = arr
+//use arr to do the number loop
+
+//for every simbol in simpleSymbolArray
+//print a number beside each symbol
+    //the number needs to start at 01 and go through 99
 
 
+//declare array of page objects
 let state = {
     currentPage: 0,
     pages: [
@@ -49,7 +76,7 @@ let state = {
             resetButton: 'reset'
         },
         {
-            headerText: ''/*array of randomized symbols with matched numbers*/,
+            headerText: arr/*array of randomized symbols with matched numbers*/,
             nextBtn: 'Reveal' /*nextPage functionality*/,
             helpText:'Find your new number.',
             directText:'Note the symbol beside the number then click reveal',
