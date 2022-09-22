@@ -17,7 +17,7 @@ let state = {
     pages: [
         {
             headerText:'I can read your mind!',
-            nextBtn: 'sarahsButt'/*(hidden)*/,
+            nextBtn: ''/*(hidden)*/,
             helpText:''/*(hidden)*/,
             directText:''/*(hidden)*/,
             goBtn: 'Go'/*nextPage functionality*/,
@@ -122,10 +122,12 @@ function nextPage () {
         if (state.currentPage === 0) {
             //run function next page
             nextPage();
+            return;
         };
         // if pageNumber is greater than 0
         if (state.currentPage > 0) {
             //run function previousPage
             previousPage();
+            return;
         }
     });
