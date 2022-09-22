@@ -23,6 +23,7 @@ let simpleSymbolArray =   [
                     '&',
                     '*',
                     ];
+//make that var = arr
 let arr = [];
 //repeat simpleSymbolArray 11 times
 for(let i=1;i<=11;i++){
@@ -31,12 +32,22 @@ for(let i=1;i<=11;i++){
     //
 }
 
-//make that var = arr
 //use arr to do the number loop
 
-//for every simbol in simpleSymbolArray
-//print a number beside each symbol
+//for every simbol in arr
+for (i=1;i<=99;i++) {
+    let n = i;
+    console.log(`${n}:${arr[n]}`);
+    //return (`${n}:${arr[n]}`);
+    //display a number beside each symbol
     //the number needs to start at 01 and go through 99
+    //each number is paired to the next symbol
+    //i.e 
+        //1-~
+        //2-!
+        //3-@
+
+}
 
 
 //declare array of page objects
