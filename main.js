@@ -35,7 +35,7 @@ for(let i=1;i<=11;i++){
 //use arr to do the number loop
 let numberSymbolArr = [];
 //for every simbol in arr
-for (let i=1;i<=99;i++) {
+for (let i=1;i<=arr.length;i++) {
     numberSymbolArr.push(i + ':' + arr[i]);
     //return (`${n}:${arr[n]}`);
     //display a number beside each symbol
@@ -97,12 +97,14 @@ let state = {
             headerText: '' /*the & symbol*/,
             nextBtn: ''/*hidden*/,
             helpText:'Your symbol is:',
-            directText:'&',
+            directText: arr[9],
             goBtn: 'reverse'/*reset icon*/,
             resetButton: 'reset'
         }
     ],
 }
+
+
 //declare currentPage as variable
 let pageNumber = state.currentPage;
 //declare array of pages with page objects
@@ -136,6 +138,9 @@ function nextPage () {
     // OR
     // Just change all the pageNumbers here to state.currentPage
     // =========
+    // Decided to just replace all pageNumbers
+
+
 
     // Set textcontent of headerText to state.pages[0].headerText
     headText.textContent = state.pages[state.currentPage].headerText;
@@ -162,10 +167,6 @@ function nextPage () {
     // Set goBtn text to state.pages[0].goBtn text
     goButton.textContent = state.pages[state.currentPage].goBtn;
 
-        /*change state of page to the previous state
-        headText.textContent = 'previous text';
-        helperText.textContent = 'previous text';
-        directerText.textContent = 'previous text';*/
     }
     //eventlistener to initialize page[0]
     document.addEventListener('DOMContentLoaded', () => {ogPage()});
