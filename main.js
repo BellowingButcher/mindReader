@@ -17,7 +17,7 @@ let state = {
     pages: [
         {
             headerText:'I can read your mind!',
-            nextBtn: ''/*(hidden)*/,
+            nextBtn: 'sarahsButt'/*(hidden)*/,
             helpText:''/*(hidden)*/,
             directText:''/*(hidden)*/,
             goBtn: 'Go'/*nextPage functionality*/,
