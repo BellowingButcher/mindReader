@@ -33,11 +33,10 @@ for(let i=1;i<=11;i++){
 }
 
 //use arr to do the number loop
-
+let numberSymbolArr = [];
 //for every simbol in arr
-for (i=1;i<=99;i++) {
-    let n = i;
-    console.log(`${n}:${arr[n]}`);
+for (let i=1;i<=99;i++) {
+    numberSymbolArr.push(i + ':' + arr[i]);
     //return (`${n}:${arr[n]}`);
     //display a number beside each symbol
     //the number needs to start at 01 and go through 99
@@ -87,7 +86,7 @@ let state = {
             resetButton: 'reset'
         },
         {
-            headerText: arr/*array of randomized symbols with matched numbers*/,
+            headerText: numberSymbolArr/*array of randomized symbols with matched numbers*/,
             nextBtn: 'Reveal' /*nextPage functionality*/,
             helpText:'Find your new number.',
             directText:'Note the symbol beside the number then click reveal',
