@@ -58,7 +58,7 @@ let state = {
             nextBtn: ''/*(hidden)*/,
             helpText:''/*(hidden)*/,
             directText:''/*(hidden)*/,
-            goBtn: '<i class="bi bi-youtube"></i>'/*nextPage functionality*/,
+            goBtn: '<i class="bi bi-youtube"></i>Start Here!'/*nextPage functionality*/,
             resetButton: 'reset'
         },
         {
