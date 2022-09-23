@@ -11,7 +11,7 @@ const goButton = document.getElementById('goBtn');
 //declare reset button
 const resetButton = document.getElementById('resetButton');
 //declare symbol array
-let ogSymbolArray =   [
+let simpleSymbolArray =   [
                     '~',
                     '!',
                     '@',
@@ -22,6 +22,33 @@ let ogSymbolArray =   [
                     '&',
                     '*',
                     ];
+//declare empty array for building the full array of 99
+let arr = [];
+//repeat simpleSymbolArray 11 times
+for(let i=1;i<=11;i++){
+    //every loop i want to add simpleSymbolArray to the end of arr
+    arr = arr.concat(simpleSymbolArray);
+}
+
+//use arr to do the number loop
+//declare empty array for pushing the symbols array plus numbers
+let numberSymbolArr = [];
+//for loop to count every symbol in arr and then add the number next to its corresponding symbol
+//i starts at 0
+//it incriments by one until i is less than or equal to the length of array arr
+for (let i=0;i<=arr.length;i++) {
+    //use my empty array to push my new array to
+    //this was my attempt to make the list look good
+    numberSymbolArr.push('|' + i + '-' + arr[i] + '|\n');
+    //display a number beside each symbol
+    //each number is paired to the next symbol
+    //i.e 
+        //1-~
+        //2-!
+        //3-@
+
+}
+
 
 //declare array of page objects
 //gonna use state as main trunk
@@ -87,33 +114,6 @@ let state = {
             resetButton: 'reset'
         }
     ],
-}
-
-//declare empty array for building the full array of 99
-let arr = [];
-//repeat ogSymbolArray 11 times
-for(let i=1;i<=11;i++){
-    //every loop i want to add ogSymbolArray to the end of arr
-    arr = arr.concat(ogSymbolArray);
-}
-
-//use arr to do the number loop
-//declare empty array for pushing the symbols array plus numbers
-let numberSymbolArr = [];
-//for loop to count every symbol in arr and then add the number next to its corresponding symbol
-//i starts at 0
-//it incriments by one until i is less than or equal to the length of array arr
-for (let i=0;i<=arr.length;i++) {
-    //use my empty array to push my new array to
-    //this was my attempt to make the list look good
-    numberSymbolArr.push('|' + i + '-' + arr[i] + '|\n');
-    //display a number beside each symbol
-    //each number is paired to the next symbol
-    //i.e 
-        //1-~
-        //2-!
-        //3-@
-
 }
 
 
