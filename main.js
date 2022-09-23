@@ -63,25 +63,25 @@ let state = {
         },
         {
             headerText: 'Pick a number from 01-99',
-            nextBtn: '<i class="bi bi-arrow-clockwise"></i>' /*the nextPage functionality*/,
+            nextBtn: '<i class="bi bi-forward"></i>' /*the nextPage functionality*/,
             helpText:'when you have your number',
-            directText:'click next icon',
+            directText:'click forward arrow. If you wish to go back, press the counterclockwise icon',
             goBtn: '<i class="bi bi-arrow-counterclockwise"></i>'/*reset icon*/,
             resetButton: 'reset'
         },
         {
             headerText:'Add both digits together to get a new number',
-            nextBtn: '<i class="bi bi-arrow-clockwise"></i>' /*nextPage functionality*/,
+            nextBtn: '<i class="bi bi-forward"></i>' /*nextPage functionality*/,
             helpText:'ex: 14 is 1 + 4 = 5',
-            directText:'click next icon',
+            directText:'click forward arrow. If you wish to go back, press the counterclockwise icon',
             goBtn: '<i class="bi bi-arrow-counterclockwise"></i>'/*reset icon*/,
             resetButton: 'reset'
         },
         {
             headerText:'Subtract your new number from the original number',
-            nextBtn: '<i class="bi bi-arrow-clockwise"></i>'/*nextPage functionality*/,
+            nextBtn: '<i class="bi bi-forward"></i>'/*nextPage functionality*/,
             helpText:'Ex: 14 - 5 = 9',
-            directText:'click next icon',
+            directText:'click forward arrow. If you wish to go back, press the counterclockwise icon',
             goBtn: '<i class="bi bi-arrow-counterclockwise"></i>'/*reset icon*/,
             resetButton: 'reset'
         },
