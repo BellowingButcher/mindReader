@@ -39,7 +39,7 @@ let numberSymbolArr = [];
 for (let i=0;i<=arr.length;i++) {
     //use my empty array to push my new array to
     //this was my attempt to make the list look good
-    numberSymbolArr.push('|' + i + '-' + arr[i] + '|');
+    numberSymbolArr.push('|' + i + '-' + arr[i] + '|\n');
     //display a number beside each symbol
     //each number is paired to the next symbol
     //i.e 
@@ -106,7 +106,7 @@ let state = {
         },
         //page 6
         {
-            headerText: 'Your symbol is ' + arr[9] ,
+            headerText: 'Your symbol is ' + arr[9] , //This puts the symbol in the header
             nextBtn: '',//insert icon for button
             helpText:'',
             directText:'' ,
@@ -119,22 +119,18 @@ let state = {
 
 //declare currentPage as variable
 let pageNumber = state.currentPage;
-//declare array of pages with page objects
-// const pages = [page1, page2, page3, page4, page5];
-// pages[0] => page1
-// pages[1] => page2
 //function for original page
 function ogPage () {
     state.currentPage = 0;
-     // Set textcontent of headerText to state.pages[0].headerText
+     // Set textcontent of headerText to the current correct state page
     headText.textContent = state.pages[pageNumber].headerText;
-     // Set nextBtn text to state.pages[0].nextBtn text
+     // Set nextBtn text to the current page state key value
     nextButton.innerHTML = state.pages[pageNumber].nextBtn;
-     // Set helpText to state.pages[0].helpText
+     // Set helpText to the current page state key value
     helperText.textContent = state.pages[pageNumber].helpText;
-     // Set directText to state.pages[0].helpText
+     // Set directText to the current page state key value
     directerText.textContent = state.pages[pageNumber].directText;
-     // Set goBtn text to state.pages[0].goBtn text
+     // Set goBtn text to current page key value
     goButton.innerHTML = state.pages[pageNumber].goBtn;
 }
 //function for updateing page
@@ -154,37 +150,41 @@ function nextPage () {
 
 
 
-    // Set textcontent of headerText to state.pages[0].headerText
+    // Set textcontent of headerText to current page key value pair
     headText.textContent = state.pages[state.currentPage].headerText;
-    // Set nextBtn text to state.pages[0].nextBtn text
+    // Set nextBtn text to current page key value pair
     nextButton.innerHTML = state.pages[state.currentPage].nextBtn;
-    // Set helpText to state.pages[0].helpText
+    // Set helpText to current page key value pair
     helperText.textContent = state.pages[state.currentPage].helpText;
-    // Set directText to state.pages[0].helpText
+    // Set directText to current page key value pair
     directerText.textContent = state.pages[state.currentPage].directText;
-    // Set goBtn text to state.pages[0].goBtn text
+    // Set goBtn text to current page key value pair
     goButton.innerHTML = state.pages[state.currentPage].goBtn;
 
     }
     function previousPage () {
         state.currentPage -= 1;
-            // Set textcontent of headerText to state.pages[0].headerText
+            // Set textcontent of headerText to the current page key value pair
     headText.textContent = state.pages[state.currentPage].headerText;
-    // Set nextBtn text to state.pages[0].nextBtn text
+    // Set nextBtn text to current page key value pair
     nextButton.innerHTML = state.pages[state.currentPage].nextBtn;
-    // Set helpText to state.pages[0].helpText
+    // Set helpText to current page key value pair
     helperText.textContent = state.pages[state.currentPage].helpText;
-    // Set directText to state.pages[0].helpText
+    // Set directText to current page key value pair
     directerText.textContent = state.pages[state.currentPage].directText;
-    // Set goBtn text to state.pages[0].goBtn text
+    // Set goBtn text to current page key value pair
     goButton.innerHTML = state.pages[state.currentPage].goBtn;
 
     }
     //eventlistener to initialize page[0]
+    //changes state of page to page[0] when the dom is loaded
     document.addEventListener('DOMContentLoaded', () => {ogPage()});
     //add eventlistener to nextBtn
+    //runs nextPage function on click
     nextButton.addEventListener('click', nextPage);
     //add eventlistener to goBtn
+    //when go button is clicked on og page run nexPage
+    //when go button is clicked on any other page than og page then run the previous page function
     goButton.addEventListener('click', () => {
         console.log(state.currentPage);
         //if page number is 0 'first on in the array'
@@ -200,4 +200,5 @@ function nextPage () {
             return;
         }
     });
+    //adds an event listener to the reset button to change the pages state to pages[0]
     resetButton.addEventListener('click', ogPage);
