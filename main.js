@@ -35,8 +35,8 @@ for(let i=1;i<=11;i++){
 //use arr to do the number loop
 let numberSymbolArr = [];
 //for every simbol in arr
-for (let i=1;i<=arr.length;i++) {
-    numberSymbolArr.push(i + ':' + arr[i]);
+for (let i=0;i<=arr.length;i++) {
+    numberSymbolArr.push('|' + i + '-' + arr[i] + '|');
     //return (`${n}:${arr[n]}`);
     //display a number beside each symbol
     //the number needs to start at 01 and go through 99
